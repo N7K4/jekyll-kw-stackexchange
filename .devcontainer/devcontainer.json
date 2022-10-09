@@ -11,7 +11,10 @@
 			"VARIANT": "3.1-bullseye",
 			// Options
 			"NODE_VERSION": "lts/*"
-		}
+		},
+		"runArgs": [
+			"--name=VScodeDevCon_jekyll-kw-stackexchange"
+		]
 	},
 
 	// Configure tool-specific properties.
