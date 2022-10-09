@@ -29,6 +29,11 @@
 		}
 	},
 
+	"mounts": [
+		// Persist bash history
+		"source=jekyll-kw-stackexchange-bashhistory,target=/commandhistory,type=volume"
+	]
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
