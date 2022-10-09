@@ -11,12 +11,11 @@
 			"VARIANT": "3.1-bullseye",
 			// Options
 			"NODE_VERSION": "lts/*"
-		},
-		"runArgs": [
-			"--name=VScodeDevCon_jekyll-kw-stackexchange"
-		]
+		}
 	},
-
+	"runArgs": [
+		"--name=VScodeDevCon_jekyll-kw-stackexchange"
+	],
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -28,23 +27,19 @@
 			]
 		}
 	},
-
 	"mounts": [
 		// Persist bash history
-		"source=jekyll-kw-stackexchange-bashhistory,target=/commandhistory,type=volume"
-	]
-
+		"source=jekyll-kw-stackexchange-bashhistory,target=/commandhistory,type=volume",
+		// Git Configuration
+		"source=${localEnv:HOME}/.git,target=/home/vscode/.git,type=bind,consistency=cached"
+	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "ruby --version",
-
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
-
 	"features": {
-		"git": "latest"
+		"git": "2.38.0"
 	}
-
 }
