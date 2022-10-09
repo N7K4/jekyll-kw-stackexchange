@@ -1,0 +1,11 @@
+{
+  "omitFTName": true,
+  "omitParentDirectory": true,
+  "overwriteExistingFiles": "prompt",
+  "customVariables": [
+    "MainGitHubUserNameForPullRequests=>N7K4"
+  ],
+  "openFilesWhenDone": [
+    ".github/dependabot.yml"
+  ]
+}

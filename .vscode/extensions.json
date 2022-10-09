@@ -1,0 +1,21 @@
+{
+  // Extension on Visual Studio Code marketplace
+  // GoTo https://marketplace.visualstudio.com/items?itemName={ExtensionName}
+
+  "recommendations": [
+    // Prettier - Code formatter
+    "esbenp.prettier-vscode",
+
+    // Ruby
+    "rebornix.ruby",
+
+    // Code Spell Checker
+    "streetsidesoftware.code-spell-checker",
+
+    // German - Code Spell Checker
+    "streetsidesoftware.code-spell-checker-german",
+
+    // Folder Templates
+    "Huuums.vscode-fast-folder-structure"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  // VS Code
+  "editor.renderWhitespace": "all",
+
+  // Language: JSON
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.autoIndent": "full",
+    "files.trimTrailingWhitespace": true
+  },
+
+  // Language: JSON with Comments
+  "[jsonc]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.autoIndent": "full",
+    "files.trimTrailingWhitespace": true
+  },
+
+  // Language: Ruby
+  "[ruby]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.autoIndent": "full",
+    "files.trimTrailingWhitespace": true
+  },
+
+  // Extension: Code Spell Checker
+  "cSpell.language": "en,de",
+  "cSpell.ignorePaths": [
+    "**/**.code-workspace",
+    "**/Gemfile",
+    "**/Gemfile.lock",
+    "**/package-lock.json",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/objects/**",
+    ".vscode",
+    ".vscode-insiders"
+  ],
+  "cSpell.words": [
+    "docu",
+    "ftsettings",
+    "fttemplates",
+    "htdocs",
+    "Huuums",
+    "jekyll",
+    "Karg",
+    "KargWare",
+    "newplugin",
+    "Nicolas",
+    "paramcase",
+    "pascalcase",
+    "Rakefile",
+    "rdoc",
+    "Struct",
+    "whitesource"
+  ],
+}

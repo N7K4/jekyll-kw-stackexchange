@@ -1,0 +1,12 @@
+{
+  "omitFTName": true,
+  "omitParentDirectory": true,
+  "overwriteExistingFiles": "prompt",
+  "customVariables": [
+    "OpenCollective_UserName=>n-13-org",
+    "PayPalMe_UserName=>KargWare"
+  ],
+  "openFilesWhenDone": [
+    ".github/FUNDING.md"
+  ]
+}

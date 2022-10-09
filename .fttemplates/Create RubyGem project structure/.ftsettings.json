@@ -1,0 +1,13 @@
+{
+  "omitFTName": true,
+  "omitParentDirectory": true,
+  "overwriteExistingFiles": "prompt",
+  "customVariables": [
+    "Company=>KargWare",
+    "Project=>NewPlugIn",
+    "ProjectName=>jekyll-kw-newplugin"
+  ],
+  "openFilesWhenDone": [
+    "NextSteps.md"
+  ]
+}

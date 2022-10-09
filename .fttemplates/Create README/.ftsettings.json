@@ -1,0 +1,12 @@
+{
+    "omitFTName": true,
+    "omitParentDirectory": true,
+    "overwriteExistingFiles": "prompt",
+    "customVariables": [
+      "Company=>KargWare",
+      "Project=>jekyll-kw-NewPlugIn"
+    ],
+    "openFilesWhenDone": [
+      "README.md"
+    ]
+}
