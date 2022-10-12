@@ -11,7 +11,7 @@ gem 'minitest-reporters', require: false
 gem 'simplecov', '~> 0.17.1', require: false
 
 gem 'rubocop', '~> 1.3', require: false
-gem 'rubocop-minitest', '~> 0.10.1', require: false
+gem 'rubocop-minitest', '~> 0.22.2', require: false
 gem 'rubocop-performance', '~> 1.9', require: false
 gem 'rubocop-rake', '~> 0.6.0', require: false
 
