@@ -138,7 +138,7 @@ module Jekyll
           assert_equal 123_456, sut.se_id
         end
 
-        def test_ctor_with_init_network_ABC
+        def test_ctor_with_init_network_abc_uppercase
           sut = ParserParameter.new
           sut.init('ABC')
 
@@ -147,7 +147,7 @@ module Jekyll
           assert_equal ParserParameter.se_id_default, sut.se_id
         end
 
-        def test_ctor_with_init_network_aBc
+        def test_ctor_with_init_network_abc_mixedcase
           sut = ParserParameter.new
           sut.init('aBc')
 
@@ -156,7 +156,7 @@ module Jekyll
           assert_equal ParserParameter.se_id_default, sut.se_id
         end
 
-        def test_ctor_with_init_network_A1B2C
+        def test_ctor_with_init_network_a1b2c_uppercase
           sut = ParserParameter.new
           sut.init('A1B2C')
 
