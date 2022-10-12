@@ -5,22 +5,18 @@ module Jekyll
     module StackExchange
       # StackExchange configuration class
       class Configuration
-        attr_accessor :my_integer, :my_float, :my_boolean, :my_string
+        attr_accessor :user_id, :api_baseurl
 
         DEFAULT_CONFIG = {
-          'my_integer' => 1,
-          'my_float' => 2.4,
-          'my_boolean' => true,
-          'my_string' => 'foo bar'
+          'user_id' => 14_754_800,
+          'api_baseurl' => 'https://api.stackexchange.com/2.3'
         }.freeze
 
         def initialize(options)
           options = generate_option_hash(options)
 
-          @my_integer = options['my_integer']
-          @my_float = options['my_float']
-          @my_boolean = options['my_boolean']
-          @my_string = options['my_string']
+          @user_id = options['user_id']
+          @api_baseurl = options['api_baseurl']
         end
 
         private
