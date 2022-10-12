@@ -11,20 +11,20 @@ on:
     tags-ignore:
       - "*"
 jobs:  
-  pre-build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Ruby 3.1
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 3.1
-      - name: bundle install
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3
+  # pre-build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Set up Ruby 3.1
+  #       uses: actions/setup-ruby@v1
+  #       with:
+  #         ruby-version: 3.1
+  #     - name: bundle install
+  #       run: |
+  #         gem install bundler
+  #         bundle install --jobs 4 --retry 3
   build:
-    needs: pre-build
+    # needs: pre-build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -38,15 +38,11 @@ jobs:
         bundle install --jobs 4 --retry 3
     - name: Run Test
       run: bundle exec rake test
-  sonarcloud:
-    name: SonarCloud
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
