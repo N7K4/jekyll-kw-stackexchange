@@ -26,32 +26,32 @@ module Jekyll
 
         def test_self_get_ids_nil
           sut = ParserParameter.get_ids(nil)
-          assert_equal nil, sut
+          assert_nil sut
         end
 
         def test_self_get_keys_nil
           sut = ParserParameter.get_keys(nil)
-          assert_equal nil, sut
+          assert_nil sut
         end
 
         def test_self_get_types_nil
           sut = ParserParameter.get_types(nil)
-          assert_equal nil, sut
+          assert_nil sut
         end
 
         def test_self_get_ids_empty
           sut = ParserParameter.get_ids('')
-          assert_equal nil, sut
+          assert_nil sut
         end
 
         def test_self_get_keys_empty
           sut = ParserParameter.get_keys('')
-          assert_equal nil, sut
+          assert_nil sut
         end
 
         def test_self_get_types_empty
           sut = ParserParameter.get_types('')
-          assert_equal nil, sut
+          assert_nil sut
         end
 
         def test_self_get_ids
