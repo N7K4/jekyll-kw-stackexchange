@@ -7,9 +7,11 @@ module Jekyll
       class ParserParameter
         attr_reader :se_key, :se_type, :se_id
 
+        # rubocop:disable Style/ClassVars
         @@se_key_default = 'SO'
         @@se_type_default = '?'
         @@se_id_default = 63_914_419
+        # rubocop:enable Style/ClassVars
 
         def self.se_key_default
           @@se_key_default
@@ -43,8 +45,10 @@ module Jekyll
           return nil if input.nil? || input.empty?
 
           arr = input.split
+          # rubocop:disable Style/SelectByRegexp
           arr.select { |v| v =~ filter_regex }
           # arr.grep { filter_regex }
+          # rubocop:enable Style/SelectByRegexp
         end
 
         def self.regex_filter_ids
@@ -56,8 +60,11 @@ module Jekyll
 
           # arr.select{|v| v =~ /(\b[\d]+\b)/}
 
-          # (?<!\S)(?=.)([1-9](\d*))?(?!\S) # rubocop:disable Lint/Syntax
+          # (?<!\S)(?=.)([1-9](\d*))?(?!\S)
+
+          # rubocop:disable Style/RegexpLiteral
           %r{ (?<!\S)(?=.)([1-9](\d*))?(?!\S) }x
+          # rubocop:enable Style/RegexpLiteral
         end
 
         def self.regex_filter_keys
@@ -65,18 +72,26 @@ module Jekyll
           ## (?=.)             #The whole thing can't be blank.
 
           # arr.select{|v| v =~ /(?<!\S)(?=.)([a-zA-Z]((\w*)|[^!@\?]|(\D*)))?(?!\S)/}
-          # rubocop:disable Lint/Syntax
           # (?<!\S)(?=.)([a-zA-Z]([a-zA-Z]*))?(?!\S)
+
+          # rubocop:disable Style/RegexpLiteral
           %r{ (?<!\S)(?=.)([a-zA-Z]([a-zA-Z]*))?(?!\S) }x
-          # rubocop:enable Lint/Syntax
+          # rubocop:enable Style/RegexpLiteral
         end
 
         def self.regex_filter_types
           ## (?<!\S) to (?!\S) #The whole match must be surrounded by either whitespace or line boundaries. So if you see something bogus like :;:9.:, ignore the 9.
           ## (?=.)             #The whole thing can't be blank.
 
-          # (?<!\S)(?=.)([!|\?|@]{1})?(?!\S) # rubocop:disable Lint/Syntax
+          # (?<!\S)(?=.)([!|\?|@]{1})?(?!\S)
+
+          # rubocop:disable Lint/DuplicateRegexpCharacterClassElement
+          # rubocop:disable Style/RedundantRegexpEscape
+          # rubocop:disable Style/RegexpLiteral
           %r{ (?<!\S)(?=.)([!|\?|@]{1})?(?!\S) }x
+          # rubocop:enable Lint/DuplicateRegexpCharacterClassElement
+          # rubocop:enable Style/RedundantRegexpEscape
+          # rubocop:enable Style/RegexpLiteral
         end
 
         def self.get_ids(input)
