@@ -28,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Set up Ruby 3.1
       uses: actions/setup-ruby@v1
       with:
@@ -42,7 +44,7 @@ jobs:
     #   with:
     #     fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
     # https://community.sonarsource.com/t/sonarcloud-ruby-coverage-not-working/39985/7
-    - name: fix code coverage paths        
+    - name: fix code coverage paths
       working-directory: ./coverage
       run: |
         sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' coverage.json
