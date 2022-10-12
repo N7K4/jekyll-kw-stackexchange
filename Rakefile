@@ -30,4 +30,10 @@ end
 require 'rubocop/rake_task'
 RuboCop::RakeTask.new(:rubocop) do |cop|
   cop.options = ['--display-cop-names']
+  cop.formatters = ['progress', 'offenses']
+  # https://www.rubydoc.info/gems/rubocop/RuboCop/RakeTask#options-instance_method
+  # cop.options = ['--display-cop-names', '-o rubocop.html', '-o rubocop.md']
+  # cop.formatters = ['html', 'markdown']
+    #--format html -o rubocop.html
+    # rubocop --display-cop-names --format markdown -o rubocop.md --format html -o rubocop.html --format progress --format offenses
 end

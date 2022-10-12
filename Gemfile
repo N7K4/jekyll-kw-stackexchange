@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # Specify your gem's dependencies in jekyll-kw-stackexchange.gemspec
 gemspec
@@ -15,6 +15,6 @@ gem 'rubocop-minitest', '~> 0.22.2', require: false
 gem 'rubocop-performance', '~> 1.9', require: false
 gem 'rubocop-rake', '~> 0.6.0', require: false
 
-gem "rubocop", "~> 1.3"
-gem "rubocop-minitest", "~> 0.10.1"
-gem "rubocop-performance", "~> 1.9"
+# gem 'rspec', '~> 3.11'
+# gem 'ruby-debug-ide', '~> 0.7.3'
+# gem 'debug', '~> 1.6.2', require: false
