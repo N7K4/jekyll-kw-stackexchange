@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 # rubocop:disable Naming/VariableNumber
-# rubocop:disable Naming/MethodName
 
 require_relative '../test_helper'
 require 'jekyll-kw-stackexchange/parser_parameter'
@@ -192,7 +191,7 @@ module Jekyll
           assert_equal 63_914_419, sut.se_id
         end
 
-        def test_ctor_with_init_AU_user_123
+        def test_ctor_with_init_au_user_123
           sut = ParserParameter.new
           sut.init('A1B2 A?C @ 123 AU foobar 555 !')
 
@@ -206,4 +205,3 @@ module Jekyll
 end
 
 # rubocop:enable Naming/VariableNumber
-# rubocop:enable Naming/MethodName
