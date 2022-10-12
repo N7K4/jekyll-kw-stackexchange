@@ -4,6 +4,9 @@
 ![Coverage](https://github.com/n13org/jekyll-kw-stackexchange/workflows/Coverage/badge.svg)
 ![RuboCop](https://github.com/n13org/jekyll-kw-stackexchange/workflows/RuboCop/badge.svg)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/98c24cd21fac2e4ef06f/maintainability)](https://codeclimate.com/github/n13org/jekyll-kw-stackexchange/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/98c24cd21fac2e4ef06f/test_coverage)](https://codeclimate.com/github/n13org/jekyll-kw-stackexchange/test_coverage)
+
 [![Gem Version](https://badge.fury.io/rb/jekyll-kw-stackexchange.svg)](https://badge.fury.io/rb/jekyll-kw-stackexchange)
 
 A plugin for [jekyll][Jekyll Website] to ...
@@ -61,6 +64,10 @@ plugins:
 
 ## ⏰ Changelog
 
+* ...
+* Prepare CI-workflow with Appraisal `bundle exec appraisal install` and `bundle exec appraisal generate`
+* Rubocop `rubocop --display-cop-names --format markdown -o rubocop.md --format html -o rubocop.html --format simple`
+* Rubocop -> `rubocop --display-cop-names --format markdown -o rubocop.md --format html -o rubocop.html --format progress --format offenses`
 * Prepare workflow on GitHub `CI` and `rubocop`
 * 0.0.1 Install [Visual Studio Extension - Folder Templates](https://marketplace.visualstudio.com/items?itemName=Huuums.vscode-fast-folder-structure), and run `NewJekyllPlugInAsRubyGem` to get the a skeleton project from template
 * 0.0.0 Create project `jekyll-kw-stackexchange` from [template][GitHub jekyll-plugin-template]
