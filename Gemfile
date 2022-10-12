@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in jekyll-kw-stackexchange.gemspec
 gemspec
 
-gem 'rake', '~> 12.0', require: false
+gem 'rake', '~> 13.0', require: false
 
 gem 'minitest', '~> 5.0', require: false
 gem 'minitest-profile', require: false
