@@ -19,6 +19,14 @@ module Jekyll
           @api_baseurl = options['api_baseurl']
         end
 
+        def self.default_user_id
+          DEFAULT_CONFIG['user_id']
+        end
+
+        def self.default_api_baseurl
+          DEFAULT_CONFIG['api_baseurl']
+        end
+
         private
 
         def generate_option_hash(options)
