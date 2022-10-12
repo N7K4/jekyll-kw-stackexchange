@@ -47,13 +47,6 @@ updates:
       interval: "daily"
     reviewers:
       - N7K4
-
-  - package-ecosystem: "yarn"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    reviewers:
-      - N7K4
   
   - package-ecosystem: "nuget"
     directory: "/"
