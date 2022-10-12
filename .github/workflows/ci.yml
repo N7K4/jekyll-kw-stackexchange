@@ -45,7 +45,6 @@ jobs:
         # https://community.sonarsource.com/t/sonarcloud-ruby-coverage-not-working/39985/7
         working-directory: ./coverage
         run: |
-          sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' .resultset.json
           sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' coverage.json
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
