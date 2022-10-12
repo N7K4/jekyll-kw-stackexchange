@@ -61,6 +61,7 @@ plugins:
 
 ## ⏰ Changelog
 
+* Prepare workflow on GitHub `CI` and `rubocop`
 * 0.0.1 Install [Visual Studio Extension - Folder Templates](https://marketplace.visualstudio.com/items?itemName=Huuums.vscode-fast-folder-structure), and run `NewJekyllPlugInAsRubyGem` to get the a skeleton project from template
 * 0.0.0 Create project `jekyll-kw-stackexchange` from [template][GitHub jekyll-plugin-template]
 
