@@ -14,7 +14,7 @@ jobs:
   # pre-build:
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - uses: actions/checkout@v2
+  #     - uses: actions/checkout@v3
   #     - name: Set up Ruby 3.1
   #       uses: actions/setup-ruby@v1
   #       with:
@@ -27,7 +27,7 @@ jobs:
     # needs: pre-build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - name: Set up Ruby 3.1
@@ -40,7 +40,7 @@ jobs:
         bundle install --jobs 4 --retry 3
     - name: Run Test
       run: bundle exec rake test
-    # - uses: actions/checkout@v2
+    # - uses: actions/checkout@v3
     #   with:
     #     fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
     # https://community.sonarsource.com/t/sonarcloud-ruby-coverage-not-working/39985/7
