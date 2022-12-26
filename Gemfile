@@ -9,7 +9,7 @@ gem 'minitest', '~> 5.0', require: false
 gem 'minitest-profile', require: false
 gem 'minitest-reporters', require: false
 
-gem 'simplecov', '~> 0.21.1', require: false
+gem 'simplecov', '~> 0.22.0', require: false
 gem "simplecov-html", "~> 0.12.3", require: false
 gem 'simplecov_json_formatter', '~> 0.1.4', require: false
 
